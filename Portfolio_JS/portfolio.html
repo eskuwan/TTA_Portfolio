@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Your Name | Portfolio</title>
+	<link rel="stylesheet" href="stylesheet/portfolio.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap"><!--This is for the use of Montserrat Font-->
+</head>
+
+<!-- Body -->
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Home Section - hero -->
+	<section id="home" class="hero">
+
+		<!-- Background Video -->
+        <div class="video-background">
+            <div class="overlay"></div>
+            <video autoplay muted loop class="background-video">
+                <source src="images/video/Typing.mp4" type="video/mp4">
+                <!-- Display message if video fails to run -->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- Contents -->
+        <div class="hero-content">
+            <h1>Your Name</h1>
+            <p id="typing-text">
+            The computer programmer is a creator of universes for which he alone is the lawgiver.
+            <br>
+            No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+            <br>
+            field of battle and to command such unswervingly dutiful actors or troops.
+            <br>
+             -Joseph Weizenbaum
+            <br><br>
+             My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+            <br><br>
+             Thank you for stopping by and enjoy! 
+            </p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+        	<!-- Image -->
+            <img src="images/html_custom.png" alt="Your Profile Picture" class="profile-img">
+            <p>
+                I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling.
+                <br><br>
+                I am a graduate of <a href="https://www.learncodinganywhere.com">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                <br><br>
+                I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!
+            </p>
+        </div>
+	</section>
+
+	<!-- GitHub Section - projects -->
+	<section id="projects" class="projects">
+        <h2>GitHub</h2>
+        <div class="project-list">
+        	<!-- First Project -->
+            <div class="project-item">
+                <img src="images/GitHub.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>You can view my coding projects on my GitHub profile here:</p>
+                <a href="https://github.com/yourusername/project1" class="btn" target="_blank">View on GitHub</a>
+            </div>
+            <!-- End of First Project -->
+
+            <!-- Add more projects as needed (Duplicate First Project to End of First Project)-->
+        </div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/YOUREMAIL" method="POST"><!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="form-footer">
+            <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+	</section>
+
+	<!-- Footer Section -->
+	<footer class="footer">
+        <p>&copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com">The Tech Academy</a></p>
+    </footer>
+    <script src="javascript/slide.js"></script>
+</body>
+</html>

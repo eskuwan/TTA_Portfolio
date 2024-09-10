@@ -1,0 +1,304 @@
+/***** GENERAL STYLING *****/
+/*** This sets some basic styles for the entire page ***/
+* {
+    margin: 0; /* Removes default margins from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+    font-family: 'Montserrat', sans-serif; /* Sets the default font family */
+}
+
+body {
+    line-height: 1.6; /* Sets the default line height */
+    color: #333; /* Sets the default text color */
+}
+/***** END OF GENERAL STYLING *****/
+
+
+/***** NAVBAR STYLING *****/
+.navbar {
+    background-color: #222; /* This colors the navbar*/
+    padding: 15px 0; /* This adds padding to the top and bottom of the navbar */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    z-index: 1000; /* This ensures other elements don't display over the navbar */
+}
+
+.navbar ul {
+    list-style: none; /* This removes bullets from list items */
+    display: flex; /* This displays list items in a row */
+    justify-content: center; /* This centers the list items horizontally */
+}
+
+.navbar ul li {
+    margin: 0 20px; /* This adds space between each list item */
+}
+
+.navbar ul li a {
+    color: #f4f4f4; /* This sets the link text color */
+    text-decoration: none; /* This removes underlines from links */
+    font-size: 18px; /* This sets the font size for links */
+    transition: color 0.3s; /* This transitions the link color on hover */
+}
+
+.navbar ul li a:hover {
+    color: #e2e2e2; /* This changes the link text color on hover */
+}
+/***** END OF NAVBAR STYLING *****/
+
+
+/***** HOME SECTION - HERO STYLING *****/
+.hero {
+    position: relative; /* This allows for absolute positioning for elements */
+    height: 100vh; /* This sets the height to the full viewport height */
+    display: flex; /* This centers the content vertically and horizontally */
+    align-items: center; /* This vertically centers the content */
+    justify-content: center; /* This horizontally centers the content */
+    color: white; /* This sets the text color to white */
+    text-align: center; /* This centers the text */
+    overflow: hidden; /* This hides any overflowing content */
+}
+
+.video-background {
+    position: absolute; /* This positions the video behind other elements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This ensures that the video stays within its container */
+    z-index: -1; /* This places the video behind other content */
+}
+
+.overlay {
+    position: absolute; /* This positions the overlay over the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* This adds a semi-transparent black overlay */
+    z-index: 1; /* This ensures the overlay is above the video but below the text */
+}
+
+.background-video {
+    position: absolute; /* This centers the video within the container */
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* This sets the video width to the viewport width */
+    height: 100vh; /* This ets the video height to the viewport height */
+    object-fit: cover; /* This ensures that the video covers the entire container */
+    transform: translate(-50%, -50%); /* This makes the video to be centered */
+    z-index: 0; /* This places the video below the overlay */
+}
+
+.hero-content {
+    position: relative; /* This positions the content over the overlay */
+    z-index: 2; /* This ensures that the content is on top of everything else */
+    color: #f4f4f4; /* This sets the text color */
+}
+
+.hero h1 {
+    font-size: 4rem; /* This sets the font size for the main heading */
+    margin-bottom: 20px; /* This adds space below the heading */
+    font-family: 'Playfair Display', serif; /* This sets a different font family for the heading instead of following Montserrat */
+    font-weight: 700; /* This makes the heading bold */
+}
+
+.hero p {
+    font-size: 1.2rem; /* This sets the font size for the subheading */
+    margin-bottom: 30px; /* This adds space below the paragraph */
+}
+
+.btn {
+    background-color: #444; /* This sets the button background color */
+    color: white; /* This sets the button text color */
+    padding: 10px 20px; /* This adds padding inside the button */
+    text-decoration: none; /* This removes underlines from the button text */
+    font-size: 1rem; /* This sets the button text size */
+    border-radius: 5px; /* This rounds the button corners */
+    transition: background-color 0.3s; /* This transitions the background color on hover */
+}
+
+.btn:hover {
+    background-color: #666; /* This changes the button background color on hover */
+}
+/***** END OF HOME SECTION - HERO STYLING *****/
+
+
+/***** ABOUT SECTION STYLING *****/
+.about {
+    padding: 60px 20px; /* This adds padding to the top and bottom */
+    background-color: #f9f9f9; /* This sets the background color */
+    text-align: center; /* This centers the text */
+}
+
+.about h2 {
+    font-size: 3rem; /* This sets the font size for the about section heading */
+    margin-bottom: 20px; /* This adds space below the heading */
+    font-family: 'Playfair Display', serif; /* This sets a different font family for the heading instead of following Montserrat */
+    font-weight: 700; /* This makes the heading bold */
+}
+
+.about-content {
+    display: flex; /* This displays content in a row */
+    align-items: center; /* This vertically centers the content */
+    justify-content: center; /* This horizontally centers the content */
+    flex-wrap: wrap; /* This allows content to wrap to the next line if needed */
+    text-align: center; /* This centers the text */
+}
+
+.profile-img {
+    border-radius: 50%; /* This makes the image into a circle */
+    margin: 20px; /* This adds space around the image */
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    border: 5px solid #eee; /* This adds a border around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* This adds a shadow in the image */
+}
+
+.about p {
+    max-width: 800px; /* This limits paragraph width */
+    margin-top: 20px; /* This adds space above the paragraph */
+    line-height: 1.8; /* This increases the space between lines */
+    font-size: 1.1rem; /* This sets the font size for the paragraph */
+}
+/***** END OF ABOUT SECTION STYLING *****/
+
+
+/***** GITHUB SECTION STYLING *****/
+.projects {
+    padding: 60px 20px; /* This adds padding inside the projects section */
+    background-color: #fff; /* This sets the background color to white */
+    text-align: center; /* This centers the text within the projects section */
+}
+
+.projects h2 {
+    font-size: 3rem; /* This sets the font size for the section title */
+    margin-bottom: 20px; /* This adds space below the title */
+    font-family: 'Playfair Display', serif; /* This applies a serif font to the title instead of following Montserrat*/
+    font-weight: 700; /* This makes the font bold */
+}
+
+.project-list {
+    display: flex; /* This enables a flexible layout for the project items */
+    flex-wrap: wrap; /* This allows the items to wrap onto multiple lines if necessary */
+    justify-content: center; /* This centers the project items horizontally */
+}
+
+.project-item {
+    background-color: #fff; /* This sets a white background for every project item */
+    border: 1px solid #ddd; /* This adds a light border around every project item */
+    margin: 15px; /* This adds margin around every project item */
+    width: 320px; /* This sets a fixed width for every project item */
+    padding: 20px; /* This adds a padding inside every project item */
+    border-radius: 10px; /* This rounds the corners of every project item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* This adds a shadow for depth */
+}
+
+.project-item img {
+    max-width: 100%; /* This ensures that the image takes up the full width of the container */
+    border-radius: 10px; /* This rounds the corners of the image */
+    margin-bottom: 15px; /* This adds space below the image */
+}
+
+.project-item h3 {
+    font-size: 1.5rem; /* This sets the font size for the project title */
+    margin-bottom: 10px; /* This adds space below the project title */
+    font-family: 'Playfair Display', serif; /* This applies a serif font to the title instead of following Montserrat */
+    font-weight: 700; /* This makes the font bold */
+}
+
+.project-item p {
+    margin-bottom: 15px; /* This adds space below the project description */
+}
+
+.project-item .btn {
+    background-color: #444; /* This sets a dark background color for the button */
+    color: white; /* This sets the button text color to white */
+    padding: 10px 15px; /* This adds padding inside the button */
+    text-decoration: none; /* This removes the underline from the button text */
+    border-radius: 5px; /* This rounds the corners of the button */
+    transition: background-color 0.3s; /* This transitions the background color on hover */
+}
+
+.project-item .btn:hover {
+    background-color: #666; /* This changes the button background color on hover */
+}
+/***** END OF GITHUB SECTION STYLING *****/
+
+
+/***** CONTACT SECTION STYLING *****/
+.contact {
+    padding: 100px 20px; /* This adds padding inside the contact section */
+    background-color: #f9f9f9; /* This sets a light gray background color */
+    text-align: center; /* This centers the text within the contact section */
+}
+
+.contact h2 {
+    font-size: 3rem; /* This sets the font size for the section title */
+    margin-bottom: 20px; /* This adds space below the title */
+    font-family: 'Playfair Display', serif; /* This applies a serif font to the title instead of following Montserrat */
+    font-weight: 700; /* This makes the font bold */
+}
+
+.contact form {
+    max-width: 600px; /* This sets a maximum width for the form */
+    margin: 0 auto; /* This centers the form horizontally */
+    text-align: left; /* This aligns the form content to the left */
+}
+
+.contact label {
+    font-size: 1.1rem; /* This sets the font size for labels */
+    margin-bottom: 5px; /* This adds space below each label */
+    display: block; /* This ensures that each label takes up the full width of the container */
+}
+
+.contact input,
+.contact textarea {
+    width: 100%; /* This sets the width of the inputs and textarea to fill the form */
+    padding: 10px; /* This adds padding inside the inputs and textarea */
+    margin-bottom: 15px; /* This adds space below each input and textarea */
+    border-radius: 5px; /* This rounds the corners of the inputs and textarea */
+    border: 1px solid #ccc; /* This adds a light gray border */
+}
+
+.contact .form-footer {
+    text-align: right; /* This aligns the send message button to the right */
+}
+
+.contact button {
+    background-color: #444; /* This sets a dark background color for the button */
+    color: white; /* This sets the button text color to white */
+    padding: 10px 20px; /* This adds padding inside the button */
+    border: none; /* This removes the border from the button */
+    border-radius: 5px; /* This rounds the corners of the button */
+    cursor: pointer; /* This changes the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s; /* This transitions the background color on hover */
+}
+
+.contact button:hover {
+    background-color: #666; /* This changes the background color on hover */
+}
+/***** END OF CONTACT SECTION STYLING *****/
+
+
+/***** FOOTER STYLING *****/
+.footer {
+    background-color: #222; /* This sets a dark background color for the footer */
+    color: white; /* This sets the footer text color to white */
+    text-align: center; /* This centers the text within the footer */
+    padding: 20px; /* This adds padding inside the footer */
+    position: fixed; /* This fixes the footer to the bottom of the page */
+    bottom: 0; /* This positions the footer at the bottom */
+    width: 100%; /* This sets the footer width to fill the screen */
+    z-index: 1000; /* This ensures that the footer stays on top of other content */
+}
+
+.footer a {
+    color: #f4f4f4; /* This sets the link color within the footer */
+    text-decoration: none; /* This removes the underline from the links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* This underlines the links on hover */
+}
+/***** END OF FOOTER STYLING *****/
