@@ -11,13 +11,14 @@ body {
     line-height: 1.6; /* Sets the default line height */
     color: #333; /* Sets the default text color */
     position: relative;
+    background-color: #eee;
 }
 /***** END OF GENERAL STYLING *****/
 
 
 /***** NAVBAR STYLING *****/
 .navbar {
-    background-color: #ececec; /* This colors the navbar*/
+    background-color: #222; /* This colors the navbar*/
     padding: 15px 0; /* This adds padding to the top and bottom of the navbar */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -36,7 +37,7 @@ body {
 }
 
 .navbar ul li a {
-    color: #5c5c5c; /* This sets the link text color */
+    color: #f4f4f4; /* This sets the link text color */
     text-decoration: none; /* This removes underlines from links */
     font-size: 18px; /* This sets the font size for links */
     transition: color 0.3s; /* This transitions the link color on hover */
@@ -90,7 +91,7 @@ body {
     font-size: 1rem; /* This sets the button text size */
     border-radius: 5px; /* This rounds the button corners */
     transition: background-color 0.3s; /* This transitions the background color on hover */
-    align-self: center;
+    align-self: flex-start; /* This positions the button at the left part of the column */
 }
 
 .btn:hover {
@@ -113,7 +114,7 @@ body {
     padding: 60px 20px; /* This adds padding to the top and bottom */
     background-color: #f9f9f9; /* This sets the background color */
     text-align: center; /* This centers the text */
-    width: 80%;
+    width: 80%; 
     position: relative;
     left: 10%;
     border-radius: 15px;
@@ -128,27 +129,23 @@ body {
 }
 
 .skills-list {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 2rem;
-    column-gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 
 .skill {
-    display: grid;
-    justify-items: space-around;
-    grid-template-columns: 30% 70%;
-    margin-right: 3rem;
-    align-items:center;
-    justify-items: center;
+    display: flex;
+    max-width: 60vmin;
+    min-width: 25vmax;
+    margin-top: 1rem;
+    align-items: center;
 }
 
 .skill img {
-    width: 6rem;
+    max-width: 6rem;
     grid-row: 1 / 3;
-    
+    align-self: center;
 }
 
 .skills p {
@@ -163,7 +160,7 @@ body {
 /***** PROJECTS SECTION STYLING *****/
 .projects {
     padding: 60px 20px; /* This adds padding inside the projects section */
-    background-color: #fff; /* This sets the background color to white */
+   /* This sets the background color to white */
     text-align: center; /* This centers the text within the projects section */
     position: relative;
     margin: 5rem;
@@ -284,7 +281,6 @@ body {
 /***** MY PROFILE LINKS SECTION STYLING *****/
 .profile-links {
     padding: 60px 20px; /* This adds padding inside the projects section */
-    background-color: #fff; /* This sets the background color to white */
     text-align: center; /* This centers the text within the projects section */
     position: relative;
     margin: 5rem;

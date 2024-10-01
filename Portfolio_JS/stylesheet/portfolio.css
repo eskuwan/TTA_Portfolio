@@ -10,13 +10,14 @@
 body {
     line-height: 1.6; /* Sets the default line height */
     color: #333; /* Sets the default text color */
+    position: relative;
 }
 /***** END OF GENERAL STYLING *****/
 
 
 /***** NAVBAR STYLING *****/
 .navbar {
-    background-color: #222; /* This colors the navbar*/
+    background-color: #ececec; /* This colors the navbar*/
     padding: 15px 0; /* This adds padding to the top and bottom of the navbar */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -35,71 +36,44 @@ body {
 }
 
 .navbar ul li a {
-    color: #f4f4f4; /* This sets the link text color */
+    color: #5c5c5c; /* This sets the link text color */
     text-decoration: none; /* This removes underlines from links */
     font-size: 18px; /* This sets the font size for links */
     transition: color 0.3s; /* This transitions the link color on hover */
 }
 
 .navbar ul li a:hover {
-    color: #e2e2e2; /* This changes the link text color on hover */
+    color: #3d3d3d; /* This changes the link text color on hover */
+    -webkit-text-stroke: 1px #3d3d3d; /*This makes the text bold on hover without moving the other ekements around it */
 }
 /***** END OF NAVBAR STYLING *****/
 
 
 /***** HOME SECTION - HERO STYLING *****/
-.hero {
-    position: relative; /* This allows for absolute positioning for elements */
-    height: 100vh; /* This sets the height to the full viewport height */
-    display: flex; /* This centers the content vertically and horizontally */
-    align-items: center; /* This vertically centers the content */
-    justify-content: center; /* This horizontally centers the content */
-    color: white; /* This sets the text color to white */
-    text-align: center; /* This centers the text */
-    overflow: hidden; /* This hides any overflowing content */
-}
-
-.video-background {
-    position: absolute; /* This positions the video behind other elements */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* This ensures that the video stays within its container */
-    z-index: -1; /* This places the video behind other content */
-}
-
-.overlay {
-    position: absolute; /* This positions the overlay over the video */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* This adds a semi-transparent black overlay */
-    z-index: 1; /* This ensures the overlay is above the video but below the text */
-}
-
-.background-video {
-    position: absolute; /* This centers the video within the container */
-    top: 50%;
-    left: 50%;
-    width: 100vw; /* This sets the video width to the viewport width */
-    height: 100vh; /* This ets the video height to the viewport height */
-    object-fit: cover; /* This ensures that the video covers the entire container */
-    transform: translate(-50%, -50%); /* This makes the video to be centered */
-    z-index: 0; /* This places the video below the overlay */
-}
 
 .hero-content {
     position: relative; /* This positions the content over the overlay */
+    top: 30px; /*This positions the content below the Navbar */
     z-index: 2; /* This ensures that the content is on top of everything else */
-    color: #f4f4f4; /* This sets the text color */
+    color: #3d3d3d; /* This sets the text color */
+    display: flex; /* This makes this container responsive */
+    align-items: center; /*This vertically centers the content */ 
+    justify-content: center; /* This horizontally centers the content */
+    flex-wrap: wrap; /*This realigns the elements when when viewed at a smaller screen */
+    column-gap: 3%; /*This puts a space between the profile photo and the short bio. */
+    padding: 5%;
+}
+
+.hero-shortBiography {
+    flex-basis: 40%;
+    display: flex; /*This makes this container responsive. */
+    flex-direction: column; /*This alligns the texts and button to a column. */
 }
 
 .hero h1 {
     font-size: 4rem; /* This sets the font size for the main heading */
     margin-bottom: 20px; /* This adds space below the heading */
-    font-family: 'Playfair Display', serif; /* This sets a different font family for the heading instead of following Montserrat */
+    /* font-family: 'Playfair Display', serif; This sets a different font family for the heading instead of following Montserrat */
     font-weight: 700; /* This makes the heading bold */
 }
 
@@ -116,34 +90,11 @@ body {
     font-size: 1rem; /* This sets the button text size */
     border-radius: 5px; /* This rounds the button corners */
     transition: background-color 0.3s; /* This transitions the background color on hover */
+    align-self: flex-start;
 }
 
 .btn:hover {
-    background-color: #666; /* This changes the button background color on hover */
-}
-/***** END OF HOME SECTION - HERO STYLING *****/
-
-
-/***** ABOUT SECTION STYLING *****/
-.about {
-    padding: 60px 20px; /* This adds padding to the top and bottom */
-    background-color: #f9f9f9; /* This sets the background color */
-    text-align: center; /* This centers the text */
-}
-
-.about h2 {
-    font-size: 3rem; /* This sets the font size for the about section heading */
-    margin-bottom: 20px; /* This adds space below the heading */
-    font-family: 'Playfair Display', serif; /* This sets a different font family for the heading instead of following Montserrat */
-    font-weight: 700; /* This makes the heading bold */
-}
-
-.about-content {
-    display: flex; /* This displays content in a row */
-    align-items: center; /* This vertically centers the content */
-    justify-content: center; /* This horizontally centers the content */
-    flex-wrap: wrap; /* This allows content to wrap to the next line if needed */
-    text-align: center; /* This centers the text */
+    background-color: #212121; /* This changes the button background color on hover */
 }
 
 .profile-img {
@@ -154,28 +105,69 @@ body {
     border: 5px solid #eee; /* This adds a border around the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* This adds a shadow in the image */
 }
+/***** END OF HOME SECTION - HERO STYLING *****/
 
-.about p {
+
+/***** SKILLS SECTION STYLING *****/
+.skills-container {
+    padding: 60px 20px; /* This adds padding to the top and bottom */
+    background-color: #f9f9f9; /* This sets the background color */
+    text-align: center; /* This centers the text */
+    width: 80%; 
+    position: relative;
+    left: 10%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* This adds a shadow for depth */
+}
+
+.skills-container h2 {
+    font-size: 4rem; /* This sets the font size for the skills section heading */
+    margin-bottom: 20px; /* This adds space below the heading */
+    font-weight: 700; /* This makes the heading bold */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skill {
+    display: flex;
+    max-width: 60vmin;
+    min-width: 25vmax;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.skill img {
+    max-width: 6rem;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.skills p {
     max-width: 800px; /* This limits paragraph width */
     margin-top: 20px; /* This adds space above the paragraph */
     line-height: 1.8; /* This increases the space between lines */
     font-size: 1.1rem; /* This sets the font size for the paragraph */
 }
-/***** END OF ABOUT SECTION STYLING *****/
+/***** END OF SKILLS SECTION STYLING *****/
 
 
-/***** GITHUB SECTION STYLING *****/
+/***** PROJECTS SECTION STYLING *****/
 .projects {
     padding: 60px 20px; /* This adds padding inside the projects section */
     background-color: #fff; /* This sets the background color to white */
     text-align: center; /* This centers the text within the projects section */
+    position: relative;
+    margin: 5rem;
 }
 
 .projects h2 {
-    font-size: 3rem; /* This sets the font size for the section title */
-    margin-bottom: 20px; /* This adds space below the title */
-    font-family: 'Playfair Display', serif; /* This applies a serif font to the title instead of following Montserrat*/
-    font-weight: 700; /* This makes the font bold */
+    font-size: 4rem; /* This sets the font size for the GitHub section heading */
+    margin-bottom: 20px; /* This adds space below the heading */
+    font-weight: 700; /* This makes the heading bold */
 }
 
 .project-list {
@@ -195,7 +187,7 @@ body {
 }
 
 .project-item img {
-    max-width: 100%; /* This ensures that the image takes up the full width of the container */
+    max-width: 90%; /* This ensures that the image takes up the full width of the container */
     border-radius: 10px; /* This rounds the corners of the image */
     margin-bottom: 15px; /* This adds space below the image */
 }
@@ -231,13 +223,17 @@ body {
     padding: 100px 20px; /* This adds padding inside the contact section */
     background-color: #f9f9f9; /* This sets a light gray background color */
     text-align: center; /* This centers the text within the contact section */
+    width: 80%;
+    position: relative;
+    left: 10%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* This adds a shadow for depth */
 }
 
 .contact h2 {
-    font-size: 3rem; /* This sets the font size for the section title */
-    margin-bottom: 20px; /* This adds space below the title */
-    font-family: 'Playfair Display', serif; /* This applies a serif font to the title instead of following Montserrat */
-    font-weight: 700; /* This makes the font bold */
+    font-size: 4rem; /* This sets the font size for the skills section heading */
+    margin-bottom: 20px; /* This adds space below the heading */
+    font-weight: 700; /* This makes the heading bold */
 }
 
 .contact form {
@@ -280,6 +276,36 @@ body {
 }
 /***** END OF CONTACT SECTION STYLING *****/
 
+/***** MY PROFILE LINKS SECTION STYLING *****/
+.profile-links {
+    padding: 60px 20px; /* This adds padding inside the projects section */
+    background-color: #fff; /* This sets the background color to white */
+    text-align: center; /* This centers the text within the projects section */
+    position: relative;
+    margin: 5rem;
+}
+
+.profile-links h2 {
+    font-size: 3rem; /* This sets the font size for the skills section heading */
+    margin-bottom: 0px; /* This adds space below the heading */
+    font-weight: 700; /* This makes the heading bold */
+}
+
+.links-list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.link {
+    margin: 2rem;
+}
+
+.link img {
+    width: 5rem;
+}
+
+/***** END OF MY PROFILE LINKS SECTION STYLING *****/
 
 /***** FOOTER STYLING *****/
 .footer {
