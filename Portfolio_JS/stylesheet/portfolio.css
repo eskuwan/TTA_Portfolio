@@ -16,6 +16,7 @@ body {
 
 
 /***** NAVBAR STYLING *****/
+
 .navbar {
     background-color: #ececec; /* This colors the navbar*/
     padding: 15px 0; /* This adds padding to the top and bottom of the navbar */
@@ -45,6 +46,24 @@ body {
 .navbar ul li a:hover {
     color: #3d3d3d; /* This changes the link text color on hover */
     -webkit-text-stroke: 1px #3d3d3d; /*This makes the text bold on hover without moving the other ekements around it */
+}
+
+@media (max-width: 768px) {
+    .navbar ul li a {
+        font-size: 14px; /* Slightly smaller font for tablets/small screens */
+        padding: 5px 10px; /* Adjust padding to reduce crowding */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li {
+        margin: 0 10px; /* Reduce margin for narrower screens */
+    }
+
+    .navbar ul li a {
+        font-size: 12px; /* Smaller font size for very small screens */
+        padding: 5px; /* Reduce padding further to fit the screen */
+    }
 }
 /***** END OF NAVBAR STYLING *****/
 
