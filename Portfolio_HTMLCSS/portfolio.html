@@ -16,67 +16,103 @@
 	<nav class="navbar">
 		<ul>
 			<li><a href="#home">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
 			<li><a href="#contact">Contact</a></li>
+            <li><a href="#profile-links">Links</a></li>
 		</ul>
 	</nav>
 
 	<!-- Home Section - hero -->
 	<section id="home" class="hero">
-
-		<!-- Background Video -->
-        <div class="video-background">
-            <div class="overlay"></div>
-            <video autoplay muted loop class="background-video">
-                <source src="images/video/Typing.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-
         <!-- Contents -->
         <div class="hero-content">
-            <h1>Your Name</h1>
-            <p id="typing-text">
-            The computer programmer is a creator of universes for which he alone is the lawgiver.
-            <br>
-            No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-            <br>
-            field of battle and to command such unswervingly dutiful actors or troops.
-            <br>
-             -Joseph Weizenbaum
-            <br><br>
-             My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-            <br><br>
-             Thank you for stopping by and enjoy! 
-            </p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-	</section>
-
-	<!-- About Section -->
-	<section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-        	<!-- Image -->
+            <!-- Image -->
             <img src="images/html_custom.png" alt="Your Profile Picture" class="profile-img">
-            <p>
+            <div class="hero-shortBiography">
+                <h1>Your Name</h1>
+                <p id="typing-text">
+                My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                <br><br>
                 I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling.
                 <br><br>
                 I am a graduate of <a href="https://www.learncodinganywhere.com">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
                 <br><br>
                 I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!
-            </p>
+                Thank you for stopping by and enjoy! 
+                </p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+            
         </div>
+	</section>
+
+	<!-- Skills Section -->
+	<section id="skills-container" class="skills-container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <!-- First Skill -->
+            <div class="skill">
+                <img src="images/HTML5_logo.png" alt="HTML5">
+                <div class="skill-definition">
+                    <h4 class="skill_name">HTML</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+            <!-- End of First Skill -->
+
+            <div class="skill">
+                <img src="images/css_logo.png" alt="CSS3">
+                <div class="skill-definition">
+                    <h4 class="skill_name">CSS</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+                
+            <div class="skill">
+                <img src="images/javascript_logo.com.png" alt="JavaScript">
+                <div class="skill-definition">
+                    <h4 class="skill_name">JavaScript</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="images/csharp_logo.png" alt="C#">
+                <div class="skill-definition">
+                    <h4 class="skill_name">C#</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="images/unity_logo.png" alt="Unity">
+                <div class="skill-definition">
+                    <h4 class="skill_name">Unity</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <img src="images/Sql_logo.png" alt="SQL">
+                <div class="skill-definition">
+                    <h4 class="skill_name">SQL</h4>
+                    <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, maxime! Sint ipsam magnam cumque dolorem!</p>
+                </div>
+            </div>
+            
+        </div>
+            <!-- Add more skills as needed (Duplicate First Skill to End of First Skill)-->
+
 	</section>
 
 	<!-- GitHub Section - projects -->
 	<section id="projects" class="projects">
-        <h2>GitHub</h2>
+        <h2>Projects</h2>
         <div class="project-list">
         	<!-- First Project -->
             <div class="project-item">
-                <img src="images/GitHub.png" alt="Project 1">
+                <img src="images/projects.png" alt="Project 1">
                 <h3>Project 1</h3>
                 <p>You can view my coding projects on my GitHub profile here:</p>
                 <a href="https://github.com/yourusername/project1" class="btn" target="_blank">View on GitHub</a>
@@ -105,6 +141,28 @@
             </div>
         </form>
 	</section>
+
+    <!--  Links to Profiles Section-->
+    <section class="profile-links" id="profile-links">
+        <h2>Links to My Profiles</h2>
+        <div class="links-list">
+            <a href="https://www.linkedin.com/login" class="link" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn logo">
+                <p>My LinkedIn Profile</p>
+            </a>
+
+            <a href="https://github.com/" class="link" target="_blank">
+                <img src="images/github-icon.png" alt="GitHub logo">
+                <p>My GitHub Account</p>
+            </a>
+
+            <a href="https://drive.google.com/drive/my-drive" class="link" target="_blank">
+                <img src="images/resume.png" alt="My Resume">
+                <p>My Resume</p>
+            </a>
+        </div>
+    </section>
+    <!--  End of Links to Profiles Section-->
 
 	<!-- Footer Section -->
 	<footer class="footer">
