@@ -10,8 +10,8 @@
 body {
     line-height: 1.6; /* Sets the default line height */
     color: #333; /* Sets the default text color */
-    position: relative;
-    background-color: #eee;
+    position: relative; /* Allows for relative positioning of child elements */
+    background-color: #eee; /* This sets a light gray background color */
 }
 /***** END OF GENERAL STYLING *****/
 
@@ -62,7 +62,7 @@ body {
     justify-content: center; /* This horizontally centers the content */
     flex-wrap: wrap; /*This realigns the elements when when viewed at a smaller screen */
     column-gap: 3%; /*This puts a space between the profile photo and the short bio. */
-    padding: 5%;
+    padding: 5%; /* This adds padding around the content */
 }
 
 .hero-shortBiography {
